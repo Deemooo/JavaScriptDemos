@@ -39,7 +39,7 @@
 		</header>
 		<section>
 			<div class="container panel-default">
-				<div class="panel-body">					
+				<div class="panel-body">
 				</div>
 				<div class="shareBut pull-left">
 					<span class="fa fa-weibo fa-3x fa-fw pull-left"></span>
@@ -49,6 +49,23 @@
 			</div>
 		</section>
 		<footer></footer>
+		<script type="text/javascript">
+			$(function() {
+				$.ajax({
+					type: "GET", //默认是GET
+					url: "http://api.avatardata.cn/MingRenMingYan/Random?key=6e46a1e11add4ff9ab05ad0b7610e5af",
+					dataType: "jsonp",
+					success: function(data) {
+						$(".panel-body").text(data.result.famous_name + data.result.famous_saying);
+					},
+					error: function(jqXHR) {
+						alert("信息错误" + jqXHR.status);
+					}
+				})
+
+			})
+		</script>
+		</script>
 	</body>
 
 </html>

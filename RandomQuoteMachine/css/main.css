@@ -1,0 +1,29 @@
+nav.navbar-inverse {
+	border-radius: 0px;
+}
+nav.navbar-inverse > h3{
+	margin: auto;
+}
+section > div.container{
+	width: 450px;
+	height: 300px;
+	margin: 60px auto;
+	background-color: #E0E0E0;
+}
+div.panel-body{
+	height: 80%;
+}
+div.shareBut{
+	width: 100px;
+	display: inline-block;
+}
+input[type=button]{
+	width: 100px;
+	height: 35px;
+	margin-top: 5px;
+	background-color: #333333;
+	color: #E0E0E0;
+	opacity: 0.8;
+	border: none;
+	border-radius: 5px;
+}
