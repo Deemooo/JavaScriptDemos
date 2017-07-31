@@ -39,33 +39,19 @@
 		</header>
 		<section>
 			<div class="container panel-default">
-				<div class="panel-body">
+				<div class="panel-body text-center">
+					<div class="panelbodyQuote text-center"></div>
+					<div class="panelbodyAuthor text-center pull-right"></div>
 				</div>
 				<div class="shareBut pull-left">
-					<span class="fa fa-weibo fa-3x fa-fw pull-left"></span>
-					<span></span>
+					<a class="fa fa-weibo fa-3x fa-fw pull-left" href="http://service.weibo.com/share/share.php?appkey=&title=&url=&pic=&searchPic=false&style=simple"></a>
+					<span class="sharePrompt text-center">Share to Weibo !</span>					
 				</div>
 				<input type="button" value="New quote" class="pull-right">
 			</div>
 		</section>
 		<footer></footer>
-		<script type="text/javascript">
-			$(function() {
-				$.ajax({
-					type: "GET", //默认是GET
-					url: "http://api.avatardata.cn/MingRenMingYan/Random?key=6e46a1e11add4ff9ab05ad0b7610e5af",
-					dataType: "jsonp",
-					success: function(data) {
-						$(".panel-body").text(data.result.famous_name + data.result.famous_saying);
-					},
-					error: function(jqXHR) {
-						alert("信息错误" + jqXHR.status);
-					}
-				})
-
-			})
-		</script>
-		</script>
+		<script src="js/main.js"></script>
 	</body>
 
 </html>
