@@ -1,6 +1,6 @@
 $(function() {
-	var UID = "UB31B5BD83"; // 测试用 用户ID，请更换成您自己的用户ID
-	var KEY = "fxp1rguqmnt3l2gw"; // 测试用key，请更换成您自己的 Key
+	var UID = "UB31B5BD83"; // 用户ID
+	var KEY = "fxp1rguqmnt3l2gw"; // Key
 	var API = "http://api.seniverse.com/v3/weather/now.json"; // 获取天气实况
 	var LOCATION = "changsha"; // 除拼音外，还可以使用 v3 id、汉语等形式
 	// 获取当前时间戳
