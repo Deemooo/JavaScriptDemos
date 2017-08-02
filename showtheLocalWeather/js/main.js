@@ -12,6 +12,14 @@ $(function() {
 	var sig = CryptoJS.HmacSHA1(str, KEY).toString(CryptoJS.enc.Base64);
 	sig = encodeURIComponent(sig);
 	str = str + "&sig=" + sig;
+	// 构造最终请求的 url
+	var url = API + "?location=" + LOCATION + "&" + str + "&callback=jsonpCallback";
+	// 向 HTML 中动态插入 script 标签，通过 JSONP 的方式进行调用
+	var newScript = document.createElement('script');
+	newScript.type = 'text/javascript';
+	newScript.src = url;
+	$('body').append(newScript);
+	//构造回调函数
 	function jsonpCallback(data) {
 		var obj = document.getElementById('content');
 		var weather = data.results[0];
@@ -21,11 +29,5 @@ $(function() {
 		text.push("Temperature: " + weather.now.temperature);
 		obj.innerText = text.join("\n");
 	}
-	// 构造最终请求的 url
-	var url = API + "?location=" + LOCATION + "&" + str + "&callback=jsonpCallback";
-	// 向 HTML 中动态插入 script 标签，通过 JSONP 的方式进行调用
-	var newScript = document.createElement('script');
-	newScript.type = 'text/javascript';
-	newScript.src = url;
-	$('body').append(newScript);
+
 })
