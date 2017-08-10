@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="http://www.jeasyui.net/Public/js/easyui/themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="http://www.jeasyui.net/Public/js/easyui/themes/icon.css">
+		<link rel="stylesheet" type="text/css" href="http://www.jeasyui.net/Public/js/easyui/demo/demo.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+		<script type="text/javascript" src="http://www.jeasyui.net/Public/js/easyui/jquery.easyui.min.js"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="easyui-panel" title="RSS Feed">
+			<div class="easyui-layout" data-options="" style="width: 100%;height: 1000px;">
+				<div data-options="region:'west',split:'true',collapsible:'true'" style="width: 200px;">
+					<ul id="t-channels" url="data/channels.json"></ul>
+
+					<div data-options="region:'center',split:'true'">
+						<div class="easyui-layout" data-options="fit:true">
+
+							<div data-options="region:'north',split:true" style="height: 300px;">
+
+							</div>
+							<div data-options="region:'center'" style="height: 300px;">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
