@@ -20,24 +20,5 @@ $(function() {
 		}
 
 	}
-	//点击按钮
-	nodeList.eq(0).click(function() {
-
-		$(this).addClass("other")
-			.siblings().removeClass("other");
-		window.scroll(0, 0);
-	})
-	nodeList.eq(1).click(function() {
-
-		$(this).addClass("other")
-			.siblings().removeClass("other");
-		window.scroll(0, 214);
-	})
-	nodeList.eq(2).click(function() {
-
-		$(this).addClass("other")
-			.siblings().removeClass("other");
-		window.scroll(0, 460);
-	})
 
 })
