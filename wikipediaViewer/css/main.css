@@ -1,0 +1,41 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	background-color: #006699;
+	position: relative;
+}
+
+p,
+span,input {
+	position: absolute;
+	left: 50%;
+	margin-left: -300px;
+	display: block;
+	width: 600px;
+	height: 50px;
+	font-size: 3em;
+	color: #EEEEEE;
+	text-align: center;
+}
+
+.randomArticle {
+	top: 200px;
+}
+
+.clickIcon {
+	top: 50px;
+}
+
+span.glyphicon {
+	top: 150px;
+	color: #FFFF66;
+}
+input[type=text]{
+	margin-left: -200px;
+	width: 400px;
+	top: 150px;
+	display: none;
+}
