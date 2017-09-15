@@ -62,7 +62,7 @@ $(function() {
 				showSearchRes(r);
 			},
 			error: function(jqXHR) {
-				console.log(jqXHR.status);
+				alert(jqXHR.status);
 			}
 		})
 	}
@@ -71,11 +71,13 @@ $(function() {
 			showFun();
 		}
 	})
-
+	
+	
 	function showSearchRes(r) {
 		var resArr = r.query.search;
-		for(let i = 0, len = reArr.length; i < len; i++) {
-			
+		var container = "<div class='container'></div>";
+		$("body").append(container);
+		for(let i = 0, len = resArr.length; i < len; i++) {			
 
 		}
 	}
