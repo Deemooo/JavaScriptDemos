@@ -42,6 +42,7 @@ $(function() {
 			).show();
 			$("input").val(
 				"").hide();
+			$(".results").empty();
 		})
 
 	//获取wiki搜索结果
@@ -59,6 +60,7 @@ $(function() {
 				if(typeof r === 'string') {
 					r = JSON.parse(r);
 				}
+				console.log(r.query.search);
 				showSearchRes(r);
 			},
 			error: function(jqXHR) {
@@ -71,14 +73,27 @@ $(function() {
 			showFun();
 		}
 	})
-	
-	
-	function showSearchRes(r) {
-		var resArr = r.query.search;
-		var container = "<div class='container'></div>";
-		$("body").append(container);
-		for(let i = 0, len = resArr.length; i < len; i++) {			
 
+	var arrResults = [];
+	var html = '';
+
+	function showSearchRes(r) {
+
+		// First we clear the children from our class to make sure no previous results are showing.
+		$('.results').empty();
+
+		// Then we also clear the array with the results before providing new information.
+		arrResults.length = 0;
+		var resArr = r.query.search;
+
+		//For each result, generate the html data.
+		for(var i in resArr) {
+
+			html = '<div id="articles" class="well"><a href="https://en.wikipedia.org/wiki/' + resArr[i].title + '"target="_blank"><h3>' + resArr[i].title + '</h3><p>' + resArr[i].snippet + '</p></a></div>';
+
+			// Displays the elements to the page
+			$('.results').append(html);
 		}
 	}
+
 })
